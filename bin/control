@@ -22,12 +22,13 @@ function status() {
 }
 
 function start() {
+    set -x
     if (is_running); then
         exit 0
     fi
 
     echo $NEO4J_CLI > env/NEO4J_CLI
-    neo4j start
+    neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
 
     ret=$?
     if [ $ret -ne 0 ]; then
