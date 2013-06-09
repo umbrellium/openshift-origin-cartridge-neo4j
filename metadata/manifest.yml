@@ -1,0 +1,25 @@
+Name: neo4j
+Cartridge-Short-Name: NEO4J
+Display-Name: NEO4J
+Version: "1.9"
+Website: https://github.com/shekhargulati/openshift-origin-cartridge-neo4j
+Cartridge-Version: 0.0.1
+Cartridge-Vendor: shekhargulati
+Categories:
+  - service
+  - database
+  - embedded
+Provides:
+  - neo4j-1.9
+  - neo4j
+Scaling:
+  Min: 1
+  Max: 1
+Endpoints:
+  - Private-IP-Name:   DB_HOST
+    Private-Port-Name: DB_PORT
+    Private-Port:      17474
+    Public-Port-Name:  DB_PROXY_PORT
+Publishes:
+  publish-db-connection-info:
+    Type: "ENV:NET_TCP:db:connection-info"
