@@ -2,7 +2,7 @@
 
 STOPTIMEOUT=10
 FMT="%a %b %d %Y %H:%M:%S GMT%z (%Z)"
-PID=pid/redis.pid
+PID=pid/neo4j.pid
 
 NEO4J_CLI="-host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT"
 
@@ -27,7 +27,7 @@ function start() {
     fi
 
     echo $NEO4J_CLI > env/NEO4J_CLI
-    erb conf/neo4j.conf.erb | neo4j-server -
+    neo4j start
 
     ret=$?
     if [ $ret -ne 0 ]; then
@@ -38,7 +38,7 @@ function start() {
 
 function stop() {
     if (is_running); then
-        redis-cli $NEO4J_CLI SHUTDOWN
+        neo4j-cli $NEO4J_CLI SHUTDOWN
         if [ $? -eq 0 ]; then
             exit 0
         fi

@@ -5,6 +5,7 @@ Version: "1.9"
 Website: https://github.com/shekhargulati/openshift-origin-cartridge-neo4j
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: shekhargulati
+Source-Url:https://github.com/shekhargulati/openshift-origin-cartridge-neo4j.git
 Categories:
   - service
   - database
