@@ -6,4 +6,4 @@ for dir in logs tmp pid cache dbs env; do
 	mkdir -p $dir
 done
 
-echo $(pwd)/versions/1.9/neo4j-1.9/bin > env/OPENSHIFT_RUBY_PATH_ELEMENT
+echo $(pwd)/versions/2.0.0-RC1/neo4j-community-2.0.0-RC1/bin > env/OPENSHIFT_RUBY_PATH_ELEMENT

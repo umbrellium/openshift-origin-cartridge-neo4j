@@ -2,13 +2,13 @@ Name: neo4j
 Cartridge-Short-Name: NEO4J
 Display-Name: NEO4J
 Description: "Neo4j is an open-source, high-performance, enterprise-grade NOSQL graph database."
-Version: '1.9'
+Version: '2.0.0-RC1'
 License: GNU GENERAL PUBLIC LICENSE
-License-Url: 
-Vendor: Shekhar Gulati
+License-Url:
+Vendor: Umbrellium
 Cartridge-Version: 0.0.1
 Cartridge-Vendor: neo4j
-Source-Url: https://github.com/shekhargulati/openshift-origin-cartridge-neo4j.git
+Source-Url: https://github.com/umbrellium/openshift-origin-cartridge-neo4j.git
 Categories:
   - service
   - database
@@ -42,7 +42,7 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - neo4j-1.9
+  - neo4j-2.0.0-RC1
   - "neo4j"
 Scaling:
   Min: 1
