@@ -29,7 +29,7 @@ function start() {
         exit 0
     fi
 
-    bin/neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
+    neo4j start -host $OPENSHIFT_NEO4J_DB_HOST -port $OPENSHIFT_NEO4J_DB_PORT
 
     ret=$?
     if [ $ret -ne 0 ]; then
