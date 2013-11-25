@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -x
+
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 NEO4J_BIN_DIR=${OPENSHIFT_NEO4J_DIR}/bin
 
